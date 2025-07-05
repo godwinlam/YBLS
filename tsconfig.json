@@ -2,16 +2,44 @@
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
     "strict": true,
+    // "lib": [
+    //   "DOM",
+    //   "DOM.Iterable",
+    //   "ESNext"
+    // ],
+    // "types": [
+    //   "node"
+    // ],
+    // "module": "ESNext",
+    // "moduleResolution": "bundler",
+    // "skipLibCheck": true,
+    // "paths": {
+    //   "@/*": [
+    //     "./*"
+    //   ]
+    // }
     "paths": {
       "@/*": [
         "./*"
+      ],
+      "@firebase/auth": [
+        "./node_modules/@firebase/auth/dist/index.rn.d.ts"
       ]
     }
   },
+  //   "include": [
+  //     "**/*.ts",
+  //     "**/*.tsx",
+  //     ".expo/types/**/*.ts",
+  //     "expo-env.d.ts",
+  //     "types/**/*.d.ts"
+  //  ]
   "include": [
     "**/*.ts",
     "**/*.tsx",
     ".expo/types/**/*.ts",
-    "expo-env.d.ts"
+    "expo-env.d.ts",
+    "src/types/**/*.d.ts",
+    "app/tokentsx"
   ]
 }

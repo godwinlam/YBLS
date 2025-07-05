@@ -1,43 +1,98 @@
+import CustomTabBar from '@/components/Navigation/CustomTabBar';
 import { Tabs } from 'expo-router';
 import React from 'react';
-import { Platform } from 'react-native';
+import { Platform, StyleSheet } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
-import { HapticTab } from '@/components/HapticTab';
-import { IconSymbol } from '@/components/ui/IconSymbol';
-import TabBarBackground from '@/components/ui/TabBarBackground';
-import { Colors } from '@/constants/Colors';
-import { useColorScheme } from '@/hooks/useColorScheme';
+const styles = StyleSheet.create({
+  safeArea: {
+    backgroundColor: '#fff',
+  },
+});
 
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
-
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-        headerShown: false,
-        tabBarButton: HapticTab,
-        tabBarBackground: TabBarBackground,
-        tabBarStyle: Platform.select({
-          ios: {
-            // Use a transparent background on iOS to show the blur effect
-            position: 'absolute',
-          },
-          default: {},
-        }),
-      }}>
+        headerStyle: {
+          backgroundColor: '#fff',
+        },
+        headerTitleStyle: {
+          fontWeight: '600',
+          color: '#1a1a1a',
+        },
+        headerShadowVisible: false,
+        tabBarStyle: {
+          height: Platform.OS === 'ios' ? 88 : 60,
+          paddingHorizontal: 8,
+          borderTopWidth: 0,
+          backgroundColor: '#fff',
+          elevation: 0,
+          shadowOpacity: 0,
+        },
+        tabBarShowLabel: false,
+      }}
+      tabBar={props => (
+        <SafeAreaView edges={['bottom']} style={styles.safeArea}>
+          <CustomTabBar {...props} />
+        </SafeAreaView>
+      )}
+    >
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          title: "home",
+          headerShown: false,
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="products"
         options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+          title: "Products",
+          headerShown: false,
+        }}
+      />
+      <Tabs.Screen
+        name="cart"
+        options={{
+          title: "Cart",
+          headerShown: false,
+        }}
+      />
+      <Tabs.Screen
+        name="cartRM"
+        options={{
+          title: "CartRM",
+          headerShown: false,
+        }}
+      />
+
+      <Tabs.Screen
+        name="orderHistory"
+        options={{
+          title: "Order",
+          headerShown: false,
+        }}
+      />
+      <Tabs.Screen
+        name="location"
+        options={{
+          title: "Location",
+          headerShown: false,
+        }}
+      />
+      <Tabs.Screen
+        name="profile"
+        options={{
+          title: "Profile",
+          headerShown: false,
+        }}
+      />
+      <Tabs.Screen
+        name="admin"
+        options={{
+          title: "Admin",
+          headerShown: false,
         }}
       />
     </Tabs>
