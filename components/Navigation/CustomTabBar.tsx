@@ -1,7 +1,7 @@
 import { useUser } from "@/context/UserContext";
 import { isValidLanguage, useLanguage } from "@/hooks/useLanguage";
 import translations from "@/translations";
-import { MaterialIcons } from "@expo/vector-icons";
+import Ionicons from "@expo/vector-icons/Ionicons";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { usePathname, useRouter } from "expo-router";
 import React, { useCallback, useEffect } from "react";
@@ -123,28 +123,28 @@ export default function CustomTabBar({
     loadLanguage();
   }, []);
 
-  const getTabIcon = (routeName: TabRouteName) => {
-    switch (routeName) {
-      case "index":
-        return "home";
-      case 'products':
-        return "shopping-bag";
-      case 'cart':
-        return "shopping-cart";
-      case 'cartRM':
-        return "shopping-cart";
-      case "orderHistory":
-        return "format-list-bulleted";
-      case "location":
-        return "location-on";
-      case "profile":
-        return "person";
-      case "admin":
-        return "admin-panel-settings";
-      default:
-        return "home";
-    }
-  };
+  const getTabIcon = (routeName: TabRouteName): keyof typeof Ionicons.glyphMap => {
+  switch (routeName) {
+    case "index":
+      return "home";
+    case "products":
+      return "bag";
+    case "cart":
+      return "cart";
+    case "cartRM":
+      return "card";
+    case "orderHistory":
+      return "list";
+    case "location":
+      return "location";
+    case "profile":
+      return "person";
+    case "admin":
+      return "settings";
+    default:
+      return "home";
+  }
+};
 
   const getTabLabel = (routeName: TabRouteName) => {
     switch (routeName) {
@@ -215,7 +215,7 @@ export default function CustomTabBar({
             style={styles.tab}
           >
             <View style={[styles.tabContent, isFocused && styles.activeTab]}>
-              <MaterialIcons
+              <Ionicons
                 name={getTabIcon(routeName)}
                 size={24}
                 color={isFocused ? "#2196F3" : "#666"}

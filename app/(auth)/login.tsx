@@ -1,7 +1,6 @@
 import showAlert from "@/components/CustomAlert/ShowAlert";
 import { auth, db } from "@/Firebase";
 import { languages, useLanguage } from "@/hooks/useLanguage";
-import { AntDesign } from "@expo/vector-icons";
 // @ts-ignore – GoogleAuthProvider & signInWithCredential are available at runtime
 import {
   sendPasswordResetEmail,
@@ -25,6 +24,7 @@ import {
 import CountryFlag from "react-native-country-flag";
 import { router } from "expo-router";
 import useGoogleSignIn from "@/hooks/useGoogleSignIn";
+import { AntDesign } from "@expo/vector-icons";
 
 interface LoginScreenProps {}
 

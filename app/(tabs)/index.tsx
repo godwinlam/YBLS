@@ -2,7 +2,7 @@ import { auth, db } from "@/Firebase";
 import HomeCarousel from "@/components/Carousel/HomeCarousel";
 import { languages, useLanguage } from "@/hooks/useLanguage";
 import { User } from "@/types/user";
-import { AntDesign } from "@expo/vector-icons";
+import  AntDesign  from "@expo/vector-icons/AntDesign";
 import { router } from "expo-router";
 import {
   collection,

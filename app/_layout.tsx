@@ -2,7 +2,7 @@ import { RewardProvider } from "@/context/RewardContext";
 import { UserProvider } from '@/context/UserContext';
 import { AuthProvider, useAuth } from "@/context/auth";
 import { useColorScheme } from "@/hooks/useColorScheme";
-import FontAwesome from "@expo/vector-icons/FontAwesome";
+
 import {
   DarkTheme,
   DefaultTheme,
@@ -27,8 +27,11 @@ SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
   const [loaded, error] = useFonts({
-    SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),
-    ...FontAwesome.font,
+    SpaceMono: require('../fonts/SpaceMono-Regular.ttf'),
+    Ionicons: require('../fonts/Ionicons.ttf'),
+    FontAwesome: require('../fonts/FontAwesome.ttf'),
+    MaterialIcons: require('../fonts/MaterialIcons.ttf'),
+    AntDesign: require('../fonts/AntDesign.ttf'),
   });
 
   useEffect(() => {

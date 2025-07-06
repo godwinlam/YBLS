@@ -43,6 +43,7 @@
       ],
       "expo-secure-store"
     ],
+    "assetBundlePatterns": ["**/*"],
     "experiments": {
       "typedRoutes": true
     }
