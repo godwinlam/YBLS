@@ -19,6 +19,7 @@
       "package": "com.godwin00931.YBLSApp"
     },
     "web": {
+      "icon": "./assets/icons/font.ttf",
       "bundler": "metro",
       "output": "static",
       "favicon": "./assets/images/favicon.png"
