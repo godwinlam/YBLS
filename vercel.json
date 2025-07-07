@@ -1,41 +1,18 @@
 {
-  "buildCommand": "npm run export:web",
-  "outputDirectory": "dist",
-  "devCommand": "expo",
-  "cleanUrls": true,
-  "framework": null,
-  "rewrites": [
+  "builds": [
     {
-      "source": "/_expo/:path*",
-      "destination": "/_expo/:path*"
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "dist" }
+    }
+  ],
+  "routes": [
+    {
+      "handle": "filesystem"
     },
     {
-      "source": "/assets/:path*",
-      "destination": "/assets/:path*"
-    },
-    {
-      "source": "/fonts/:path*",
-      "destination": "/fonts/:path*"
-    },
-    {
-      "source": "/assets/node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/:file(.*).ttf",
-      "destination": "/:file.ttf"
-    },
-    {
-      "source": "/:file(.*).ttf",
-      "destination": "/:file.ttf"
-    },
-    {
-      "source": "/assets/node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/:file",
-      "destination": "/:file"
-    },
-    {
-      "source": "/:file",
-      "destination": "/:file"
-    },
-    {
-      "source": "/:path*",
-      "destination": "/"
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ]
 }
