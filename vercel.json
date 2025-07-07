@@ -18,8 +18,20 @@
       "destination": "/fonts/:path*"
     },
     {
+      "source": "/assets/node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/:file(.*).ttf",
+      "destination": "/:file.ttf"
+    },
+    {
       "source": "/:file(.*).ttf",
       "destination": "/:file.ttf"
+    },
+    {
+      "source": "/assets/node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/:file",
+      "destination": "/:file"
+    },
+    {
+      "source": "/:file",
+      "destination": "/:file"
     },
     {
       "source": "/:path*",
