@@ -45,7 +45,7 @@ export default function YBCScreen() {
   const [pin, setPin] = React.useState("");
   const [pendingAmount, setPendingAmount] = React.useState<number | null>(null);
 
-  const handlePurchase = async (amount: 500 | 1000 | 1500 | 2000 | 3000) => {
+  const handlePurchase = async (amount: 600 | 1300 | 2800 | 5000 | 8000) => {
     if (!user) return;
     if ((user.RM ?? 0) < amount) {
       showAlert(
@@ -100,10 +100,10 @@ export default function YBCScreen() {
           updatedAt: Date.now(),
         };
         if (
-          amount === 1000 ||
-          amount === 1500 ||
-          amount === 2000 ||
-          amount === 3000
+          amount === 1300 ||
+          amount === 2800 ||
+          amount === 5000 ||
+          amount === 8000
         ) {
           updateData.rewardPercentage = 0.05; // 5% reward on children purchases
           updateData.rewardExpiresAt = Timestamp.fromMillis(
@@ -234,11 +234,11 @@ export default function YBCScreen() {
     if (pendingAmount) handlePurchase(pendingAmount as any);
   };
 
-  const handle500Purchase = () => requestPurchase(500);
-  const handle1000Purchase = () => requestPurchase(1000);
-  const handle1500Purchase = () => requestPurchase(1500);
-  const handle2000Purchase = () => requestPurchase(2000);
-  const handle3000Purchase = () => requestPurchase(3000);
+  const handle600Purchase = () => requestPurchase(600);
+  const handle1300Purchase = () => requestPurchase(1300);
+  const handle2800Purchase = () => requestPurchase(2800);
+  const handle5000Purchase = () => requestPurchase(5000);
+  const handle8000Purchase = () => requestPurchase(8000);
 
   return (
     <View style={styles.container}>
@@ -248,12 +248,12 @@ export default function YBCScreen() {
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.productCard}>
           <TouchableOpacity
-            onPress={handle500Purchase}
+            onPress={handle600Purchase}
             disabled={processing}
             style={styles.productButton}
           >
             <Image
-              source={require("@/assets/images/voucher.png")}
+              source={require("@/assets/images/600-YBC.jpg")}
               style={styles.image}
             />
           </TouchableOpacity>
@@ -262,12 +262,12 @@ export default function YBCScreen() {
 
         <View style={styles.productCard}>
           <TouchableOpacity
-            onPress={handle1000Purchase}
+            onPress={handle1300Purchase}
             disabled={processing}
             style={styles.productButton}
           >
             <Image
-              source={require("@/assets/images/test01.png")}
+              source={require("@/assets/images/1300-YBC.jpeg")}
               style={styles.image}
             />
           </TouchableOpacity>
@@ -276,12 +276,12 @@ export default function YBCScreen() {
 
         <View style={styles.productCard}>
           <TouchableOpacity
-            onPress={handle1500Purchase}
+            onPress={handle2800Purchase}
             disabled={processing}
             style={styles.productButton}
           >
             <Image
-              source={require("@/assets/images/burger.jpg")}
+              source={require("@/assets/images/2800-YBC.jpeg")}
               style={styles.image}
             />
           </TouchableOpacity>
@@ -290,12 +290,12 @@ export default function YBCScreen() {
 
         <View style={styles.productCard}>
           <TouchableOpacity
-            onPress={handle2000Purchase}
+            onPress={handle5000Purchase}
             disabled={processing}
             style={styles.productButton}
           >
             <Image
-              source={require("@/assets/images/burger.jpg")}
+              source={require("@/assets/images/5000-YBC.jpeg")}
               style={styles.image}
             />
           </TouchableOpacity>
@@ -304,12 +304,12 @@ export default function YBCScreen() {
 
         <View style={styles.productCard}>
           <TouchableOpacity
-            onPress={handle3000Purchase}
+            onPress={handle8000Purchase}
             disabled={processing}
             style={styles.productButton}
           >
             <Image
-              source={require("@/assets/images/burger.jpg")}
+              source={require("@/assets/images/8000-YBC.jpeg")}
               style={styles.image}
             />
           </TouchableOpacity>
