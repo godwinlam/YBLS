@@ -341,8 +341,8 @@ const styles = StyleSheet.create({
     backgroundColor: "lightyellow",
   },
   image: {
-    width: 300,
-    height: 100,
+    width: 350,
+    height: 150,
     margin: 10,
     borderRadius: 10,
     overflow: "hidden",
