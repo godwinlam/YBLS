@@ -253,7 +253,7 @@ export default function YBCScreen() {
             style={styles.productButton}
           >
             <Image
-              source={require("@/assets/images/600-YBC.jpg")}
+              source={require("@/assets/images/600-YBC.jpeg")}
               style={styles.image}
             />
           </TouchableOpacity>
