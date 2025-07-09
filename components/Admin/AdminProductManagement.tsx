@@ -71,6 +71,7 @@ const categories = [
   "Promotions",
   "Hot Treatment",
   "Professional Skin Treatment",
+  "Facial Treatment",
   "Wellness Care",
   "Postnatal Care",
   "Bioelectrical Therapy",

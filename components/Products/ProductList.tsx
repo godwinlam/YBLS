@@ -65,6 +65,12 @@ export default function ProductList({
         banner: require("@/assets/images/Professional Skin Treatment.jpg"),
       },
       {
+        id: "Facial Treatment",
+        name: t.facial_Treatment,
+        icon: require("@/assets/images/test.png"),
+        banner: require("@/assets/images/test.png"),
+      },
+      {
         id: "Wellness Care",
         name: t.wellness_Care,
         icon: require("@/assets/images/test.png"),
@@ -220,7 +226,10 @@ export default function ProductList({
           />
         </View>
         <Image source={bannerImage} style={styles.bannerImage} />
-        <Text style={styles.categoryHeader}>{categories.find(c => c.id === selectedCategory)?.name || selectedCategory}</Text>
+        <Text style={styles.categoryHeader}>
+          {categories.find((c) => c.id === selectedCategory)?.name ||
+            selectedCategory}
+        </Text>
         <FlatList
           data={filteredProducts}
           renderItem={renderProductItem}

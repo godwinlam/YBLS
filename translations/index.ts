@@ -308,6 +308,7 @@ interface Translation {
   wellness_Care: string;
   postnatal_Care: string;
   bioelectrical_therapy: string;
+  facial_Treatment: string;
 
   // Allow other translations
   [key: string]: string;
@@ -648,6 +649,7 @@ const translations: { [key: string]: LanguageInfo } = {
       wellness_Care: "Wellness Care",
       postnatal_Care: "Postnatal Care",
       bioelectrical_therapy: "Bioelectrical Therapy",
+      facial_Treatment: "Facial Treatment",
     },
   },
   zh: {
@@ -967,6 +969,7 @@ const translations: { [key: string]: LanguageInfo } = {
       wellness_Care: "女性保养护理",
       postnatal_Care: "产后修复管理",
       bioelectrical_therapy: "生物电疗",
+      facial_Treatment: "面部护理",
     },
   },
   id: {
@@ -1304,6 +1307,7 @@ const translations: { [key: string]: LanguageInfo } = {
       wellness_Care: "Perawatan kesehatan",
       postnatal_Care: "Manajemen Pemulihan Pasca Melahirkan",
       bioelectrical_therapy: "Terapi Bioelektrik",
+      facial_Treatment: "Perawatan wajah",
     },
   },
   hi: {
@@ -1642,6 +1646,7 @@ const translations: { [key: string]: LanguageInfo } = {
       wellness_Care: "स्वास्थ्य कर्मचारी",
       postnatal_Care: "प्रसवोत्तर स्वास्थ्य प्रबंधन",
       bioelectrical_therapy: "जैवविद्युत चिकित्सा",
+      facial_Treatment: "फेसियल ट्रीटमेंट",
     },
   },
   ru: {
@@ -1979,6 +1984,7 @@ const translations: { [key: string]: LanguageInfo } = {
       wellness_Care: "Уход за здоровьем",
       postnatal_Care: "Постnatal Care",
       bioelectrical_therapy: "Bioelektрическая терапия",
+      facial_Treatment: "Фейсиальный tratamiento",
     },
   },
   ko: {
@@ -2314,7 +2320,8 @@ const translations: { [key: string]: LanguageInfo } = {
       professional_Skin_Treatment: "전문적인 피부 치료",
       wellness_Care: "건강관리",
       postnatal_Care: "포스트나탈케어",
-      bioelectrical_therapy: "생체전기 요법",
+      bioelectrical_therapy: "생체전기 요법", 
+      facial_Treatment: "피부 치료",
     },
   },
   ja: {
@@ -2648,7 +2655,8 @@ const translations: { [key: string]: LanguageInfo } = {
       professional_Skin_Treatment: "専門的な皮膚治療",
       wellness_Care: "ウェルネスケア",
       postnatal_Care: "ポストナタルケア",
-      bioelectrical_therapy: "バイオ電気療法",
+      bioelectrical_therapy: "バイオ電気療法",  
+      facial_Treatment: "フェイスケア",
     },
   },
   vi: {
@@ -2984,6 +2992,7 @@ const translations: { [key: string]: LanguageInfo } = {
       wellness_Care: "Dịch vụ chăm sóc sức khỏe",
       postnatal_Care: "Quản lý phục hồi sau sinh",
       bioelectrical_therapy: "Liệu pháp điện sinh học",
+      facial_Treatment: "Trang bị chuyên nghiệp",
     },
   },
   th: {
@@ -3316,6 +3325,7 @@ const translations: { [key: string]: LanguageInfo } = {
       wellness_Care: "การดูแลสุขภาพ",
       postnatal_Care: "การดูแลหลังคลอด",
       bioelectrical_therapy: "การบำบัดด้วยไฟฟ้าชีวภาพ",
+      facial_Treatment: "การดูแลใบหน้า",
     },
   },
 };
